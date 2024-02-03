@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    #02040b,
+    #0d1218,
+    #131b22,
+    #16242c,
+    #192d36,
+    #182d35,
+    #172e34,
+    #172e33,
+    #132528,
+    #101d1e,
+    #0a1515,
+    #010908
+  );
+}

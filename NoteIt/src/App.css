@@ -1,0 +1,21 @@
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  width: 100%;
+  margin-top: 22vmin;
+}
+
+.header {
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 2px 3px 0px #3e3e7c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  margin-bottom: 20vh;
+  padding-top: 20vh;
+}
