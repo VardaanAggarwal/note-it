@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import "./style.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -16,11 +16,12 @@ const Page = () => {
         );
         setData(resp.data.content);
         divRef.current.textContent = resp.data.content;
+        divRef.current.focus();
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-    divRef.current.focus();
+
     fetchData();
   }, []);
 
@@ -41,6 +42,15 @@ const Page = () => {
     }, 1000);
 
     return () => clearTimeout(timeoutId);
+  }, [data]);
+
+  useLayoutEffect(() => {
+    const range = document.createRange();
+    const selection = window.getSelection();
+    range.selectNodeContents(divRef.current);
+    range.collapse(false);
+    selection.removeAllRanges();
+    selection.addRange(range);
   }, [data]);
 
   return (
