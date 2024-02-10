@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "./style.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-
+import { BASE_URL } from "../config";
 const Page = () => {
   const params = useParams();
   const divRef = useRef();
@@ -12,7 +12,7 @@ const Page = () => {
     const fetchData = async () => {
       try {
         const resp = await axios.get(
-          `http://localhost:8000/v1/api/note/${params.domainName}/`
+          `${BASE_URL}/v1/api/note/${params.domainName}/`
         );
         setData(resp.data.content);
         divRef.current.textContent = resp.data.content;
@@ -31,7 +31,7 @@ const Page = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       axios
-        .post(`http://localhost:8000/v1/api/note/`, {
+        .post(`${BASE_URL}/v1/api/note/`, {
           key: params.domainName,
           content: data,
         })
