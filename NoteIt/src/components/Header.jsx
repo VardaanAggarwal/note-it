@@ -7,7 +7,7 @@ const Header = () => {
         className="text-4xl font-bold"
         style={{ color: "whitesmoke", marginBottom: "10px" }}
       >
-        NoteIt
+        NoteIn
       </h1>
       <h5 className="text-xl typewriter" style={{ color: "white" }}>
         The simplest way to share text online
