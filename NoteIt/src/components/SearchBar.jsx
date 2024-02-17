@@ -21,7 +21,7 @@ const SearchBar = () => {
         style={{ color: "white" }}
         className="input input-bordered pl-4 pr-4 w-50 max-w-xs p-2.5 shad-white"
       >
-        note-it.vercel.app/
+        note-in.vercel.app/
       </p>
 
       <input
