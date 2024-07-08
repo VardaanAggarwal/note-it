@@ -29,6 +29,7 @@ const Page = () => {
     setData(divRef.current.textContent);
   };
 
+  // This use effect is performing `debouncing` 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       axios
