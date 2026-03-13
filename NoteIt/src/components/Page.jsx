@@ -57,7 +57,7 @@ const Page = () => {
     <>
       <div
         ref={divRef}
-        className="note-container"
+        className="note-container meow text-3xl"
         contentEditable="plaintext-only"
         suppressContentEditableWarning={true}
         onInput={handleDataChange}

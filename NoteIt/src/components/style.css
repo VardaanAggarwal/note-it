@@ -27,3 +27,21 @@
   overflow: scroll;
   border: 0px;
 }
+
+.meow {
+  background-image: linear-gradient(
+    to right bottom,
+    #02040b,
+    #0d1218,
+    #131b22,
+    #16242c,
+    #192d36,
+    #182d35,
+    #172e34,
+    #172e33,
+    #132528,
+    #101d1e,
+    #0a1515,
+    #010908
+  );
+}
